@@ -8,7 +8,7 @@ import {
   FaQrcode,
 } from "react-icons/fa";
 
-export const  = [
+export const dashboardLinks = [
   {
     name: "Dashboard",
     link: "/",
@@ -55,7 +55,6 @@ export const  = [
     icon: <FaQrcode />,
   },
 ];
-
 // export const adminLinks = [
 //   {
 //     links: [
