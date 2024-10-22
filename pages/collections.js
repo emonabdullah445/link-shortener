@@ -41,25 +41,4 @@ function CollectionsPage() {
   );
 }
 
-// export async function getServerSideProps(context) {
-//   const session = await getSession(context);
-//   const id = session?.user?.id;
-
-//   console.log("session", id);
-
-//   const url = `${API_URL}/poster/details/${id}`;
-//   const res = await fetch(url);
-//   const data = await res.json();
-
-//   // console.log(data);
-
-//   if (res.ok) {
-//     return { props: { data } };
-//   } else {
-//     return {
-//       notFound: true,
-//     };
-//   }
-// }
-
 export default CollectionsPage;
