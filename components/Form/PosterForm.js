@@ -42,6 +42,7 @@ function PosterForm({ id, adminId }) {
   const validate = Yup.object({
     username: Yup.string().required("Username is required"),
     password: Yup.string().required("Password is required"),
+    verifyId: Yup.string().required("Verify Id is required"),
     posterId: Yup.string()
       .required("Poster Id is required")
       .max(3, "Not More than 3 characters")
@@ -54,12 +55,13 @@ function PosterForm({ id, adminId }) {
   const fetchedLinks = fetchedData?.data?.users;
 
   const handleSubmit = (values, formik) => {
-    const { username, password, posterId, links } = values;
+    const { username, password, posterId, verifyId, links } = values;
     const submitvalues = {
       id: id,
       username: username,
       password: password,
       posterId: posterId,
+      verifyId: verifyId,
       links: links,
     };
 
@@ -91,6 +93,7 @@ function PosterForm({ id, adminId }) {
                 type="text"
                 maxLength={3}
               />
+              <TextField label="verifyId *" name="verifyId" type="text" />
               <div className="">
                 <p className="font-semibold text-gray-600">Links *</p>
                 <div className="flex flex-col">
