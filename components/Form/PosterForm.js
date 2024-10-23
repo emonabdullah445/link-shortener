@@ -36,6 +36,7 @@ function PosterForm({ id, adminId }) {
     username: "",
     password: "",
     posterId: "",
+    verifyId: "",
     links: [],
   };
 
@@ -106,10 +107,10 @@ function PosterForm({ id, adminId }) {
                             name="links"
                             label={`${link
                               ?.split("https://")
-                              ?.join("")}/verify/${adminId}/${
+                              ?.join("")}/${adminId}/${
                               formik.values.posterId
-                            }`}
-                            value={`${link}/verify/${adminId}/${formik.values.posterId}`}
+                            }/${formik.values.verifyId}`}
+                            value={`${link}/${adminId}/${formik.values.posterId}/${formik.values.verifyId}`}
                             resetonchange="true"
                           />
                         ))}
