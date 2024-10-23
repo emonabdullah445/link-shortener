@@ -94,7 +94,7 @@ function PosterForm({ id, adminId }) {
                 type="text"
                 maxLength={3}
               />
-              <TextField label="verifyId *" name="verifyId" type="text" />
+              <TextField label="VerifyId *" name="verifyId" type="text" />
               <div className="">
                 <p className="font-semibold text-gray-600">Links *</p>
                 <div className="flex flex-col">
